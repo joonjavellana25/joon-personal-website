@@ -3,41 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jonathan CJ - Personal Website</title>
+    <title>Home | Joonjavellana</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="/assets/img/favicon.png">
+    <meta property="og:title" content="Joonjavellana | Web App Specialist & Tech Consultant" />
+    <meta property="og:description" content="I'm a web app specialist and tech consultant who loves to code and help others with their tech needs." />
+    <meta property="og:image" content="https://i.imgur.com/UYUkv7b.png" />
+    <meta name="description" content="I'm a web app specialist and tech consultant who loves to code and help others with their tech needs.">
 </head>
 <body>
     <nav class="navbar">
         <div class="container">
-            <div class="logo">Jonathan CJ</div>
+            <a href="/" class="logo underline-none">Joonjavellana</a>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
+                <li><a href="#home" class="active">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
 
     <section id="home" class="hero">
         <div class="container">
-            <h1>Hi, I'm Jonathan CJ</h1>
-            <p class="subtitle">Full Stack Developer & Tech Enthusiast</p>
+            <h1>Hola, I'm Jonathan CJ !</h1>
+            <p class="subtitle">Web App Specialist & Tech Consultant</p>
             <div class="social-links">
-                <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="https://github.com/joonjavellana25" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com//in/jonathan-c-j-698822100" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                <a href="https://youtube.com/@duhVideogrammer" class="social-icon"><i class="fab fa-youtube"></i></a>
             </div>
         </div>
     </section>
 
     <section id="about" class="about">
         <div class="container">
-            <h2>About Me</h2>
+            <h2 class="section-title">About Me</h2>
             <div class="about-content">
+                <div class="about-img">
+                    <div class="img-wrapper">
+                        <img src="/assets/img/about/001JonathanC_.png" alt="Jonathan CJ" class="profile-img">
+                    </div>
+                </div>
                 <div class="about-text">
-                    <p>I'm a passionate software developer with expertise in both frontend and backend development. I love creating beautiful, functional, and user-friendly websites and applications.</p>
+                    <h3>E-commerce Web App Specialist &<br>Tech Consultant</h3>
+                    <p>I'm a passionate software developer with expertise in both frontend and backend development. I love crafting responsive, minimal, and user-friendly web and mobile applications that deliver exceptional user experiences. On the other hand, I'm also a tech consultant who can help you with your tech needs. Well, my friends call me Jon. Let's connect!</p>
+                    <div class="about-details">
+                        <div class="detail-item">
+                            <i class="fas fa-laptop-code"></i>
+                            <div class="detail-item-content">
+                                <h4>Frontend Development</h4>
+                                <p>Vue, Nuxt, JavaScript, TypeScript, HTML5, CSS3, Tailwind CSS</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-server"></i>
+                            <div class="detail-item-content">
+                                <h4>Backend Development</h4>
+                                <p>Laravel, Node.js, PHP</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-mobile-alt"></i>
+                            <div class="detail-item-content">
+                                <h4>Mobile Development</h4>
+                                <p>Android</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-database"></i>
+                            <div class="detail-item-content">
+                                <h4>Database & DevOps</h4>
+                                <p>Docker, Firebase, MongoDB, PostgreSQL</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-headset"></i>
+                            <div class="detail-item-content">
+                                <h4>Tech Support</h4>
+                                <p>Windows, MacOS, Linux, Android, Hosting/Domain, Web Maintenance</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="mailto:hello@joonjavellana.com" class="btn-primary">Email <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
@@ -45,28 +93,42 @@
 
     <section id="projects" class="projects">
         <div class="container">
-            <h2>My Projects</h2>
+            <h2>Featured Projects</h2>
             <div class="project-grid">
-                <!-- Project cards will be added here -->
+                <div class="project-card">
+                    <img src="/assets/img/projects/thedrumhq.com.au_.png" alt="Drum HQ Australia">
+                    <div class="project-content">
+                        <h3>E-commerce Platform (Drum HQ)</h3>
+                        <p>An e-commerce platform with user authentication, product listing, and payment integration. Built with Nuxt.js, Tailwind CSS, and Laravel.</p>
+                        <a href="https://thedrumhq.com.au" class="btn">View Project</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="/assets/img/projects/fin-ed.org_.png" alt="Fin Ed Philippines">
+                    <div class="project-content">
+                        <h3>Fin Ed Philippines</h3>
+                        <p>A responsive website for a financial education platform. Built with Wordpress.</p>
+                        <a href="https://fin-ed.org/" class="btn">View Project</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="/assets/img/projects/anmskipbins.com.au_.png" alt="ANM Skip Bins Australia">
+                    <div class="project-content">
+                        <h3>ANM Skip Bins Australia</h3>
+                        <p>A responsive website for a skip bins company. Built with PHP Native.</p>
+                        <a href="https://anmskipbins.com.au/" class="btn">View Project</a>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <form id="contact-form">
-                <input type="text" placeholder="Name" required>
-                <input type="email" placeholder="Email" required>
-                <textarea placeholder="Message" required></textarea>
-                <button type="submit" class="btn">Send Message</button>
-            </form>
+            <div class="text-center" style="margin-top: 2rem;">
+                <a href="projects.html" class="btn btn-outline">View All Projects</a>
+            </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Jonathan CJ. All rights reserved.</p>
+            <p>&copy; 2025 Joonjavellana. All rights reserved.</p>
         </div>
     </footer>
 
