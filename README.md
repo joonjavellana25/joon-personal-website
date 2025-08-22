@@ -4,7 +4,7 @@ A modern, responsive personal website built with HTML, CSS, and JavaScript.
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/96ffaf76-6432-4d28-9f0e-5b8853af7c4d/deploy-status)](https://app.netlify.com/projects/jonathancj-portfolio/deploys)
 
-Live Site: https://jonathancj-portfolio.netlify.app/
+Live Site: https://joonjavellana.com/
 
 ## Features
 
