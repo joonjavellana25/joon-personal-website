@@ -34,7 +34,7 @@ async function loadArticles() {
                 <h2><a href="/articles/${article.id}">${article.title}</a></h2>
                 <div class="article-meta">${new Date(article.date).toLocaleDateString()}</div>
                 <p>${article.description}</p>
-                <a href="/articles/${article.id}" class="read-more">Read more →</a>
+                <a href="/post.html?id=${article.id}" class="read-more">Read more →</a>
             </article>
         `).join('');
         

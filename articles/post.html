@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article | Joonjavellana</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/articles.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="logo underline-none uppercase text-bold">Joonjavellana</a>
+            <ul class="nav-links">
+                <li><a href="/" class="text-bold">Home</a></li>
+                <li><a href="/#about" class="text-bold">About</a></li>
+                <li><a href="/#projects" class="text-bold">Projects</a></li>
+                <li><a href="/articles/" class="text-bold active">Articles</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container article-container">
+        <div id="article-body" class="article-body"></div>
+    </main>
+
+    <script>
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const id = urlParams.get('id');
+
+        fetch(`/articles/markdown/${id}.md`)
+        .then(response => response.text())
+        .then(data => {
+            const article = marked(data);
+            document.getElementById('article-body').innerHTML = article;
+        });
+    </script>
+</body>
+</html>
