@@ -105,12 +105,12 @@ function updateMetaTags(article) {
     // Update Open Graph tags
     document.querySelector('meta[property="og:title"]').content = `${article.title} | Joonjavellana`;
     document.querySelector('meta[property="og:description"]').content = article.description;
-    document.querySelector('meta[property="og:url"]').content = `https://joonjavellana.com/articles/${article.id}`;
+    document.querySelector('meta[property="og:url"]').content = `https://jonathancj-portfolio.netlify.app/articles/${article.id}`;
     
     // Update Twitter card tags
     document.querySelector('meta[property="twitter:title"]').content = `${article.title} | Joonjavellana`;
     document.querySelector('meta[property="twitter:description"]').content = article.description;
-    document.querySelector('meta[property="twitter:url"]').content = `https://joonjavellana.com/articles/${article.id}`;
+    document.querySelector('meta[property="twitter:url"]').content = `https://jonathancj-portfolio.netlify.app/articles/${article.id}`;
     
     // Update canonical URL
     let canonical = document.querySelector('link[rel="canonical"]');
@@ -119,7 +119,7 @@ function updateMetaTags(article) {
         canonical.rel = 'canonical';
         document.head.appendChild(canonical);
     }
-    canonical.href = `https://joonjavellana.com/articles/${article.id}`;
+    canonical.href = `https://jonathancj-portfolio.netlify.app/articles/${article.id}`;
 }
 
 // Load articles when the page loads
