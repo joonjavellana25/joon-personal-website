@@ -1,8 +1,8 @@
 # Getting Started with Web Development
+<small>*Published on August 23, 2025*</small>
 
 <img class="article-image w-full my-8" src="/assets/img/003.jpeg" alt="Laptop Stock Image">
 
-*Published on August 23, 2025*
 
 ## Introduction
 

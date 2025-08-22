@@ -1,5 +1,23 @@
 [
   {
+    "id": "web3-fintech-davao",
+    "title": "Web3: A Game Changer for Local Fintech Startups — Davao Edition",
+    "description": "How Davao's Web3 community is building practical fintech solutions with a focus on local impact and regulatory compliance.",
+    "date": "2025-08-23",
+    "image": "/assets/img/006.jpg",
+    "category": "Blockchain & Fintech",
+    "readTime": "12 min read"
+  },
+  {
+    "id": "web3-fintech-startups",
+    "title": "Web3: A Game Changer for Local Fintech Startups",
+    "description": "Explore how Web3 is enabling practical fintech solutions for local startups through tokenization, smart contracts, and regulatory frameworks.",
+    "date": "2025-08-23",
+    "image": "/assets/img/005.jpg",
+    "category": "Blockchain & Fintech",
+    "readTime": "10 min read"
+  },
+  {
     "id": "how-coding-saved-me",
     "title": "How Coding Saved Me from Myself",
     "description": "A personal journey of finding purpose and healing through code and faith.",

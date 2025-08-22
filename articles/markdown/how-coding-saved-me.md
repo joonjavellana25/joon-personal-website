@@ -1,8 +1,8 @@
 # How Coding Saved Me from Myself
+<small>*Published on August 23, 2025*</small>
 
 <img class="article-image w-full my-8" src="https://i.imgur.com/t0KMbCC.jpeg" alt="Laptop Stock Image">
 
-*Published on August 23, 2025*  
 
 Life can sometimes feel overwhelming, filled with heartache, challenges, and moments of self-doubt. But in the midst of these struggles, I found an unexpected refuge—coding. It wasn't just about learning a technical skill; it became a way for me to navigate life, lean on Christ, and ultimately reshape my purpose.
 

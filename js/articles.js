@@ -5,26 +5,32 @@ marked.setOptions({
     smartypants: true
 });
 
-// Article data - add your markdown files here
-const articles = [
-    {
-        id: 'how-coding-saved-me',
-        title: 'How Coding Saved Me from Myself',
-        date: '2024-08-23',
-        description: 'A personal journey of finding purpose and healing through code and faith.',
-        file: 'how-coding-saved-me.md'
-    },
-    {
-        id: 'getting-started',
-        title: 'Getting Started with Web Development',
-        date: '2024-08-23',
-        description: 'A beginner\'s guide to starting your web development journey.',
-        file: 'getting-started.md'
+// Articles data will be loaded from external JSON file
+let articles = [];
+
+// Function to load articles from JSON file
+async function loadArticlesData() {
+    try {
+        const response = await fetch('/data/articles.json');
+        if (!response.ok) {
+            throw new Error('Failed to load articles data');
+        }
+        return await response.json();
+    } catch (error) {
+        console.error('Error loading articles data:', error);
+        return [];
     }
-];
+}
 
 // Function to load and display articles
 async function loadArticles() {
+    // Load articles data first
+    articles = await loadArticlesData();
+    
+    if (articles.length === 0) {
+        console.error('No articles found');
+        return;
+    }
     const articleList = document.getElementById('article-list');
     
     // If we're on the articles listing page
