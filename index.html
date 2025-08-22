@@ -3,23 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | Joonjavellana</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <!-- Google Fonts -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#ffffff">
+    
+    <!-- Primary Meta Tags -->
+    <title>Jonathan CJ | Web App Specialist & Tech Consultant</title>
+    <meta name="title" content="Jonathan CJ | Web App Specialist & Tech Consultant">
+    <meta name="description" content="Web application specialist and technology consultant with expertise in building modern web applications and helping businesses with their technical needs.">
+    <meta name="keywords" content="web developer, tech consultant, web applications, JavaScript, React, Node.js, full-stack developer">
+    <meta name="author" content="Jonathan CJ">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://joonjavellana.com/">
+    <meta property="og:title" content="Jonathan CJ | Web App Specialist & Tech Consultant">
+    <meta property="og:description" content="Web application specialist and technology consultant with expertise in building modern web applications.">
+    <meta property="og:image" content="https://i.imgur.com/UYUkv7b.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://joonjavellana.com/">
+    <meta property="twitter:title" content="Jonathan CJ | Web App Specialist & Tech Consultant">
+    <meta property="twitter:description" content="Web application specialist and technology consultant with expertise in building modern web applications.">
+    <meta property="twitter:image" content="https://i.imgur.com/UYUkv7b.png">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="css/style.css" as="style">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Favicon -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"></noscript>
+    
+    <!-- Icons & Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
-    <!-- Meta -->
-    <meta property="og:title" content="Joonjavellana | Web App Specialist & Tech Consultant" />
-    <meta property="og:description" content="I'm a web app specialist and tech consultant who eats codes and helps others with their tech needs." />
-    <meta property="og:image" content="https://i.imgur.com/UYUkv7b.png" />
-    <meta name="description" content="I'm a web app specialist and tech consultant who eats codes and helps others with their tech needs.">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Optimise for SEO -->
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Joonjavellana">
+    <meta name="keywords" content="web app specialist, tech consultant, web developer, software developer, web app development, web app development company, web app development services, web app development company in Philippines, web app development services in Philippines">
 </head>
 <body>
     <nav class="navbar">
@@ -29,6 +58,7 @@
                 <li><a href="#home" class="active text-bold">Home</a></li>
                 <li><a href="#about" class="text-bold">About</a></li>
                 <li><a href="#projects" class="text-bold">Projects</a></li>
+                <li><a href="/articles/" class="text-bold">Articles</a></li>
             </ul>
         </div>
     </nav>
@@ -101,6 +131,26 @@
                         </a>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Articles -->
+    <section id="articles" class="articles">
+        <div class="container">
+            <h2>Articles</h2>
+            <div class="article-grid">
+                <div class="article-card">
+                    <img src="/assets/img/articles/getting-started.png" alt="Getting Started with Web Development">
+                    <div class="article-content">
+                        <h3>Getting Started with Web Development</h3>
+                        <p>Learn the basics of web development with this comprehensive guide.</p>
+                        <a href="/articles/getting-started" class="btn">Read Article</a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center" style="margin-top: 2rem;">
+                <a href="/articles/" class="btn btn-outline">View All Articles</a>
             </div>
         </div>
     </section>
