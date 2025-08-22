@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Joonjavellana</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,11 +29,6 @@
                 <li><a href="#home" class="active text-bold">Home</a></li>
                 <li><a href="#about" class="text-bold">About</a></li>
                 <li><a href="#projects" class="text-bold">Projects</a></li>
-                <li class="calendly-badge">
-                    <a href="#book-a-live-crash-course" class="calendly-badge-content text-bold">
-                        Book a Crash Course
-                    </a>
-                </li>
             </ul>
         </div>
     </nav>
@@ -46,7 +40,7 @@
             <div class="social-links">
                 <a href="https://github.com/joonjavellana25" class="social-icon"><i class="fab fa-github"></i></a>
                 <a href="https://linkedin.com//in/jonathan-c-j-698822100" class="social-icon"><i class="fab fa-linkedin"></i></a>
-                <a href="https://youtube.com/hearonJon" class="social-icon"><i class="fab fa-youtube"></i></a>
+                <a href="https://instagram.com/joonjavellana7" class="social-icon"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
     </section>
@@ -101,10 +95,9 @@
                         </div>
                     </div>
                     <div class="cta-buttons" style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1.5rem;">
-                        <a href="" 
-                           onclick="Calendly.initPopupWidget({url: 'https://calendly.com/contact-ssvideogrammer/45min'});return false;" 
+                        <a href="https://tidycal.com/jonathancj7/"
                            class="btn-primary">
-                           Book for a FREE consultation <i class="fas fa-arrow-right"></i>
+                           Schedule a meeting <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
                 </div>
@@ -147,24 +140,7 @@
         </div>
     </section>
 
-    <!-- Book a Live Crash Course Section -->
-    <section id="book-a-live-crash-course" class="cta-section" style="background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%); color: white; padding: 5rem 0; margin: 4rem 0 0 0;">
-        <div class="container">
-            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-                <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">🚀 Ready to Build Your Next Web Project?</h2>
-                <p style="font-size: 1.25rem; margin-bottom: 2rem; opacity: 0.9;">Book a 1-on-1 crash course and accelerate your web development journey. Learn directly from an experienced developer and get personalized guidance.</p>
-                
-                <div class="cta-buttons" style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1.5rem;">
-                    <a href="" 
-                       onclick="Calendly.initPopupWidget({url: 'https://calendly.com/contact-ssvideogrammer/1-hour-crash-course-sessions-on-site'});return false;" 
-                       class="btn" 
-                       style="background: white; color: #4f46e5; font-weight: 600; padding: 0.75rem 2rem; font-size: 1.1rem; border-radius: 8px; transition: all 0.3s ease; text-decoration: none;">
-                        Book a crash course now
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+    <div class="tidycal-embed" data-path="jonathancj7"></div>
 
     <footer>
         <div class="container">
@@ -172,8 +148,7 @@
         </div>
     </footer>
 
-    <script type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/contact-ssvideogrammer/45min?primary_color=0d9488', text: 'Book a consultation', color: '#1a9c8f', textColor: '#ffffff' }); }</script>
-    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    <script src="https://asset-tidycal.b-cdn.net/js/embed.js" async></script>
     <script src="js/main.js"></script>
 </body>
 </html>
