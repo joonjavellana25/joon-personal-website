@@ -4,7 +4,62 @@
     display: grid;
     gap: 2rem;
 }
-
+.article-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+.article-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.article-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.article-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.article-card-content {
+    padding: 1.5rem;
+}
+.article-card-content h2 {
+    margin: 0 0 0.5rem;
+    font-size: 1.5rem;
+    text-align: left;
+}
+.article-card-content h2 a {
+    color: #333;
+    font-weight: 500;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+.article-card-content h2 a:hover {
+    color: #007bff;
+}
+.article-card-content p {
+    color: #666;
+    margin-bottom: 0.75rem;
+}
+.article-card-content .article-meta {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+}
+.article-card-content .article-meta time {
+    font-weight: 500;
+}
+.article-card-content .article-meta span {
+    margin-left: 0.5rem;
+}
+.article-excerpt {
+    color: #666;
+    margin-bottom: 0.75rem;
+}
 .article-preview {
     padding: 1.5rem;
     border-radius: 8px;

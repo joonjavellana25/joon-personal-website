@@ -1,0 +1,20 @@
+[
+  {
+    "id": "how-coding-saved-me",
+    "title": "How Coding Saved Me from Myself",
+    "description": "A personal journey of finding purpose and healing through code and faith.",
+    "date": "2025-08-23",
+    "image": "https://i.imgur.com/t0KMbCC.jpeg",
+    "category": "Personal Growth",
+    "readTime": "5 min read"
+  },
+  {
+    "id": "getting-started",
+    "title": "Getting Started with Web Development",
+    "description": "A beginner's guide to starting your web development journey.",
+    "date": "2025-08-23",
+    "image": "/assets/img/003.jpeg",
+    "category": "Web Development",
+    "readTime": "8 min read"
+  }
+]

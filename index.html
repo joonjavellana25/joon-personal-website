@@ -45,6 +45,8 @@
     <!-- CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/articles.css">
+    
     <!-- Optimise for SEO -->
     <meta name="robots" content="index, follow">
     <meta name="author" content="Joonjavellana">
@@ -139,16 +141,14 @@
     <section id="articles" class="articles">
         <div class="container">
             <h2>Articles</h2>
-            <div class="article-grid">
-                <div class="article-card">
-                    <img src="/assets/img/articles/getting-started.png" alt="Getting Started with Web Development">
-                    <div class="article-content">
-                        <h3>Getting Started with Web Development</h3>
-                        <p>Learn the basics of web development with this comprehensive guide.</p>
-                        <a href="/articles/getting-started" class="btn">Read Article</a>
-                    </div>
+            <div id="featured-articles" class="article-grid">
+                <!-- Articles will be loaded here by featured.js -->
+                <div class="loading-spinner">
+                    <div class="spinner"></div>
+                    <p>Loading articles...</p>
                 </div>
             </div>
+            
             <div class="text-center" style="margin-top: 2rem;">
                 <a href="/articles/" class="btn btn-outline">View All Articles</a>
             </div>
@@ -200,5 +200,6 @@
 
     <script src="https://asset-tidycal.b-cdn.net/js/embed.js" async></script>
     <script src="js/main.js"></script>
+    <script src="js/featured.js" defer></script>
 </body>
 </html>

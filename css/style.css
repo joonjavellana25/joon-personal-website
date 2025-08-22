@@ -19,6 +19,88 @@ body {
     color: var(--text-color);
 }
 
+
+/* Refactored typography styles using vanilla CSS */
+h1, h2, h3, h4, h5, h6, p, li {
+    margin-bottom: 1rem;
+}
+
+h1 { font-size: 2rem; font-weight: bold !important; }
+h2 { font-size: 1.75rem; font-weight: bold !important; }
+h3 { font-size: 1.5rem; font-weight: bold !important; }
+h4 { font-size: 1.25rem; font-weight: bold !important; }
+h5 { font-size: 1.125rem; font-weight: bold !important; }
+h6 { font-size: 1rem; font-weight: bold !important; }
+p { font-size: 1rem; font-weight: normal !important; }
+li { font-size: 1rem; font-weight: normal !important; }
+
+
+.leading-none { line-height: 1 !important; }
+.leading-tight { line-height: 1.25 !important; }
+.leading-normal { line-height: 1.5 !important; }
+.leading-loose { line-height: 2 !important; }
+
+.text-left { text-align: left !important; }
+.text-center { text-align: center !important; }
+.text-right { text-align: right !important; }
+
+.flex { display: flex !important; }
+.justify-center { justify-content: center !important; }
+
+.btn {
+    display: inline-flex;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    line-height: 1;
+    border-radius: 0.25rem;
+    transition: all 0.15s ease;
+    align-items: center;
+    justify-content: center;
+    appearance: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: var(--white);
+}
+
+.btn-accent {
+    background-color: var(--accent-color);
+    color: var(--white);
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid currentColor;
+    color: currentColor;
+}
+
+.btn-lg {
+    padding: 1rem 1.5rem;
+    font-size: 1.25rem;
+    border-radius: 0.3rem;
+}
+
+.btn-sm {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    border-radius: 0.2rem;
+}
+
+.btn-xl {
+    padding: 1rem 1.5rem;
+    font-size: 1.25rem;
+    border-radius: 0.3rem;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
