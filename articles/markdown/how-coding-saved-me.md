@@ -1,6 +1,6 @@
 # How Coding Saved Me from Myself
 
-![Laptop Stock Image](https://i.imgur.com/t0KMbCC.jpeg)
+<img class="article-image w-full my-8" src="https://i.imgur.com/t0KMbCC.jpeg" alt="Laptop Stock Image">
 
 *Published on August 23, 2025*  
 

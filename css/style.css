@@ -907,3 +907,19 @@ footer {
     .p-64 { padding: 16rem; }
 }
 
+/* Article Image */
+.article-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin: 1.5rem 0;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.my-8 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
