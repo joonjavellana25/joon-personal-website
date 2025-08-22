@@ -70,6 +70,16 @@
         // Check if marked is already loaded
         if (window.marked) {
             loadArticle();
+            
+            // Update page title with article title
+            const metaTitle = document.querySelector('meta[property="og:title"]');
+            const articleTitle = document.querySelector('h1 a');
+            if (articleTitle && metaTitle) {
+                metaTitle.setAttribute('content', articleTitle.innerText);
+                document.title = articleTitle.innerText + ' | Joonjavellana';
+            }
+            
+
         } else {
             // If not, wait for it to load
             const script = document.createElement('script');
