@@ -26,16 +26,44 @@
     </main>
 
     <script>
-        const queryString = window.location.search;
-        const urlParams = new URLSearchParams(queryString);
-        const id = urlParams.get('id');
+        // Wait for marked.js to be loaded
+        function loadArticle() {
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            const id = urlParams.get('id');
 
-        fetch(`/articles/markdown/${id}.md`)
-        .then(response => response.text())
-        .then(data => {
-            const article = marked(data);
-            document.getElementById('article-body').innerHTML = article;
-        });
+            fetch(`/articles/markdown/${id}.md`)
+            .then(response => response.text())
+            .then(data => {
+                marked.setOptions({
+                    breaks: true,
+                    gfm: true,
+                    smartypants: true
+                });
+
+                const article = marked.parse(data);
+                document.getElementById('article-body').innerHTML = article;
+            })
+            .catch(error => {
+                console.error('Error loading article:', error);
+                document.getElementById('article-body').innerHTML = '<p>Error loading article. Please try again later.</p>';
+            });
+        }
+
+        // Check if marked is already loaded
+        if (window.marked) {
+            loadArticle();
+        } else {
+            // If not, wait for it to load
+            const script = document.createElement('script');
+            script.src = 'https://cdn.jsdelivr.net/npm/marked/marked.min.js';
+            script.onload = loadArticle;
+            script.onerror = () => {
+                console.error('Failed to load marked.js');
+                document.getElementById('article-body').innerHTML = '<p>Error loading content. Please try again later.</p>';
+            };
+            document.head.appendChild(script);
+        }
     </script>
 </body>
 </html>
