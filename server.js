@@ -31,7 +31,20 @@ const server = http.createServer((req, res) => {
   let contentType = MIME_TYPES[extname] || 'application/octet-stream';
   
   // Set the file path to serve from the current directory
-  const fullPath = path.join(__dirname, filePath);
+  let fullPath = path.join(__dirname, filePath);
+
+  // If path resolves to a directory, try to serve its index.html
+  try {
+    const stat = fs.statSync(fullPath);
+    if (stat.isDirectory()) {
+      filePath = path.join(filePath, 'index.html');
+      fullPath = path.join(__dirname, filePath);
+      const newExt = path.extname(filePath);
+      contentType = MIME_TYPES[newExt] || 'text/html';
+    }
+  } catch (e) {
+    // If statSync fails, proceed to readFile and handle ENOENT below
+  }
   
   // Check if file exists
   fs.readFile(fullPath, (error, content) => {

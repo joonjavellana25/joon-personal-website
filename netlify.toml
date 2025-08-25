@@ -1,10 +1,15 @@
 [build]
-  publish = "/"
-  command = ""
+  publish = "."
+  command = "node scripts/build-articles.js"
 
 [dev]
   command = "python -m http.server 8000"
   port = 8000
+
+[[redirects]]
+  from = "/articles/:id"
+  to = "/articles/:id.html"
+  status = 200
 
 [[redirects]]
   from = "/*"

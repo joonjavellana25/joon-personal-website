@@ -1,0 +1,72 @@
+/* Global CSS Reset (modern, minimal)
+   Author: Cascade (for Jonathan CJ)
+   Date: 2025-08-26
+*/
+
+/* Box sizing rules */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+}
+
+/* Improve text rendering */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100dvh;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Make media easier to work with */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* Improve word wrapping for long content */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: anywhere;
+}
+
+/* Unset list styles for lists marked as role=list (keeps default elsewhere) */
+ul[role="list"], ol[role="list"] {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Better default link styles while inheriting color */
+a {
+  color: inherit;
+  text-decoration-thickness: from-font;
+  text-underline-offset: 0.2em;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+/* Buttons baseline */
+button {
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* Tables: border-collapse baseline */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}

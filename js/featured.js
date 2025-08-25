@@ -1,3 +1,13 @@
+/**
+ * Featured.js
+ *
+ * Author: Jonathan CJ
+ * Date: 2025-08-26
+ * Version: 1.0.0
+ *
+ * This file contains the JavaScript code for handling featured articles on the homepage.
+ */
+
 // Load and display featured articles on the homepage
 document.addEventListener('DOMContentLoaded', function() {
     const featuredContainer = document.getElementById('featured-articles');

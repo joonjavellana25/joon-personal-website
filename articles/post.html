@@ -4,9 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Article | Joonjavellana</title>
+    <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/articles.css">
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- SEO: Open Graph & Twitter (placeholders updated dynamically) -->
+    <meta property="og:title" content="Article | Joonjavellana">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="/assets/img/001-mac.jpeg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Article | Joonjavellana">
+    <meta property="twitter:description" content="">
+    <meta property="twitter:url" content="">
+    <meta property="twitter:image" content="/assets/img/001-mac.jpeg">
+    <link rel="canonical" href="">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,8 +38,16 @@
         </div>
     </nav>
 
-    <main class="container article-list article-container">
+    <main class="container article-list article-container max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl">
         <section class="p-8 px-2 md:px-3 lg:px-4 relative">
+            <header class="flex justify-start">
+                <button onclick="window.history.back()" class="btn btn-primary px-4 py-2 mt-4">
+                    &larr; <span class="text-lg">Back</span>
+                </button>
+                <button onclick="window.location.href='/articles/'" class="btn btn-primary px-4 py-2 mt-4">
+                    Articles
+                </button>
+            </header>
             <article class="article-preview">
                 <div id="article-body" class="article-body article-content"></div>
             </article>
@@ -37,6 +58,9 @@
         <div class="flex justify-center">
             <button onclick="window.history.back()" class="btn btn-primary px-4 py-2 mt-4">
                 &larr; <span class="text-lg">Back</span>
+            </button>
+            <button onclick="window.location.href='/articles/'" class="btn btn-primary px-4 py-2 mt-4">
+                Articles
             </button>
         </div>
     </main>
@@ -49,9 +73,71 @@
             const urlParams = new URLSearchParams(queryString);
             const id = urlParams.get('id');
 
-            fetch(`/articles/markdown/${id}.md`)
-            .then(response => response.text())
+            const showRemovedMsg = () => {
+                document.getElementById('article-body').innerHTML = '<p>This post has been removed or failed to load.</p>';
+            };
+
+            const updateMeta = ({ title, description, image }) => {
+                const pageTitle = title ? `${title} | Joonjavellana` : 'Article | Joonjavellana';
+                const url = window.location.href;
+                const img = image || '/assets/img/001-mac.jpeg';
+
+                document.title = pageTitle;
+
+                const set = (sel, val) => {
+                    const el = document.querySelector(sel);
+                    if (el) el.setAttribute('content', val || '');
+                };
+                const setHref = (val) => {
+                    let link = document.querySelector('link[rel="canonical"]');
+                    if (!link) {
+                        link = document.createElement('link');
+                        link.rel = 'canonical';
+                        document.head.appendChild(link);
+                    }
+                    link.href = val || '';
+                };
+
+                set('meta[property="og:title"]', pageTitle);
+                set('meta[property="og:description"]', description || '');
+                set('meta[property="og:url"]', url);
+                set('meta[property="og:image"]', img);
+
+                set('meta[property="twitter:title"]', pageTitle);
+                set('meta[property="twitter:description"]', description || '');
+                set('meta[property="twitter:url"]', url);
+                set('meta[property="twitter:image"]', img);
+
+                setHref(url);
+            };
+
+            // Validate id exists and resembles a safe slug/filename
+            if (!id || /[^a-z0-9\-]/i.test(id)) {
+                showRemovedMsg();
+                updateMeta({ title: 'Article', description: 'This post has been removed or failed to load.' });
+                return;
+            }
+
+            const mdPath = `/articles/markdown/${id}.md`;
+
+            // Prefetch metadata for SEO (title/description) from articles.json
+            let metaPromise = fetch('/data/articles.json')
+                .then(r => r.ok ? r.json() : [])
+                .catch(() => []);
+
+            fetch(mdPath)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Failed to fetch: ${response.status}`);
+                }
+                return response.text();
+            })
             .then(data => {
+                // Guard against empty files
+                if (!data || !data.trim()) {
+                    throw new Error('Empty content');
+                }
+
                 marked.setOptions({
                     breaks: true,
                     gfm: true,
@@ -60,10 +146,20 @@
 
                 const article = marked.parse(data);
                 document.getElementById('article-body').innerHTML = article;
+
+                // Update SEO metadata
+                metaPromise.then(list => {
+                    const found = Array.isArray(list) ? list.find(a => a.id === id) : null;
+                    const title = found?.title || (document.querySelector('h1')?.innerText || 'Article');
+                    const description = found?.description || '';
+                    const image = found?.image;
+                    updateMeta({ title, description, image });
+                });
             })
             .catch(error => {
                 console.error('Error loading article:', error);
-                document.getElementById('article-body').innerHTML = '<p>Error loading article. Please try again later.</p>';
+                showRemovedMsg();
+                updateMeta({ title: 'Article', description: 'This post has been removed or failed to load.' });
             });
         }
 

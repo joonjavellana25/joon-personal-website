@@ -1,3 +1,13 @@
+/**
+ * Main.js
+ *
+ * Author: Jonathan CJ
+ * Date: 2025-08-26
+ * Version: 1.0.0
+ *
+ * This file contains the main JavaScript for the website. It handles smooth scrolling for navigation links, 
+ * sticky navigation, and contact form handling.
+ */
 document.addEventListener('DOMContentLoaded', () => {
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -18,6 +28,12 @@ document.addEventListener('DOMContentLoaded', () => {
     
     window.addEventListener('scroll', () => {
         const currentScroll = window.pageYOffset;
+        // Toggle sticky state after slight scroll
+        if (currentScroll > 12) {
+            navbar.classList.add('is-sticky');
+        } else {
+            navbar.classList.remove('is-sticky');
+        }
         
         if (currentScroll <= 0) {
             navbar.classList.remove('scroll-up');

@@ -4,27 +4,31 @@
         "title": "Web3: A Game Changer for Local Fintech Startups — Davao Edition",
         "date": "2025-08-23",
         "description": "How Davao's Web3 community is building practical fintech solutions with a focus on local impact and regulatory compliance.",
-        "file": "web3-fintech-davao.md"
+        "file": "web3-fintech-davao.md",
+        "image": "/assets/img/004.jpg"
     },
     {
         "id": "web3-fintech-startups",
         "title": "Web3: A Game Changer for Local Fintech Startups",
         "date": "2025-08-23",
         "description": "Explore how Web3 is enabling practical fintech solutions for local startups through tokenization, smart contracts, and regulatory frameworks.",
-        "file": "web3-fintech-startups.md"
+        "file": "web3-fintech-startups.md",
+        "image": "/assets/img/005.jpg"
     },
     {
         "id": "how-coding-saved-me",
         "title": "How Coding Saved Me from Myself",
-        "date": "2024-08-23",
+        "date": "2025-08-23",
         "description": "A personal journey of finding purpose and healing through code and faith.",
-        "file": "how-coding-saved-me.md"
+        "file": "how-coding-saved-me.md",
+        "image": "/assets/img/006.jpg"
     },
     {
         "id": "getting-started",
         "title": "Getting Started with Web Development",
-        "date": "2024-08-23",
+        "date": "2025-08-23",
         "description": "A beginner's guide to starting your web development journey.",
-        "file": "getting-started.md"
+        "file": "getting-started.md",
+        "image": "/assets/img/001-mac.jpeg"
     }
 ]

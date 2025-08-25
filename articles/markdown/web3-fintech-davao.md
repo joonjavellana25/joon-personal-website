@@ -1,6 +1,3 @@
-# Web3: A Game Changer for Local Fintech Startups — Davao Edition
-<small>*Published on August 23, 2025 (updated — includes Davao local spotlight)*</small>
-
 <img class="article-image w-full my-8" src="/assets/img/006.jpg" alt="Blockchain and Fintech">
 
 

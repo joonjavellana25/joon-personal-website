@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web3: A Game Changer for Local Fintech Startups — Davao Edition | Joonjavellana</title>
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/articles.css">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <meta property="og:title" content="Web3: A Game Changer for Local Fintech Startups — Davao Edition | Joonjavellana">
+  <meta property="og:description" content="How Davao&#39;s Web3 community is building practical fintech solutions with a focus on local impact and regulatory compliance.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://joonjavellana.com/articles/web3-fintech-davao">
+  <meta property="og:image" content="/assets/img/004.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Web3: A Game Changer for Local Fintech Startups — Davao Edition | Joonjavellana">
+  <meta property="twitter:description" content="How Davao&#39;s Web3 community is building practical fintech solutions with a focus on local impact and regulatory compliance.">
+  <meta property="twitter:url" content="https://joonjavellana.com/articles/web3-fintech-davao">
+  <meta property="twitter:image" content="/assets/img/004.jpg">
+  <link rel="canonical" href="https://joonjavellana.com/articles/web3-fintech-davao">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <a href="/" class="logo underline-none uppercase text-bold">Joonjavellana</a>
+      <ul class="nav-links">
+        <li><a href="/" class="text-bold">Home</a></li>
+        <li><a href="/#about" class="text-bold">About</a></li>
+        <li><a href="/#projects" class="text-bold">Projects</a></li>
+        <li><a href="/articles/" class="text-bold active">Articles</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container article-list article-container max-w-screen-md lg:max-w-screen-lg">
+    <section class="p-8 px-2 md:px-3 lg:px-4 relative">
+      <div class="flex justify-between">
+        <button onclick="window.history.back()" class="btn btn-primary px-4 py-2 mt-4">
+            &larr; <span class="text-lg">Back</span>
+        </button>
+        <button onclick="window.location.href='/articles/'" class="btn btn-primary px-4 py-2 mt-4">
+            Articles
+        </button>
+      </div>
+      <article class="article-preview">
+        <header>
+          <h1>Web3: A Game Changer for Local Fintech Startups — Davao Edition</h1>
+          <div class="article-meta">8/23/2025</div>
+        </header>
+        <div id="article-body" class="article-body article-content"></div>
+      </article>
+      <div id="article-meta" class="article-meta"></div>
+      <div id="article-comments" class="article-comments"></div>
+    </section>
+    <div class="flex justify-center">
+      <a href="/articles/" class="btn btn-primary px-4 py-2 mt-4">&larr; <span class="text-lg">Back</span></a>
+    </div>
+  </main>
+
+  <footer class="main-footer">
+    <div class="container">
+      <p><a href="https://joonjavellana.com/">Joonjavellana</a> &copy; 2025</p>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      const mdPath = '/articles/markdown/web3-fintech-davao.md';
+      const articleBody = document.getElementById('article-body');
+      const showError = (msg) => { articleBody.innerHTML = '<p>' + msg + '</p>'; };
+
+      fetch(mdPath)
+        .then(r => { if (!r.ok) throw new Error('Failed to fetch markdown'); return r.text(); })
+        .then(txt => { if (!txt.trim()) throw new Error('Empty markdown'); articleBody.innerHTML = marked.parse(txt); })
+        .catch(err => { console.error(err); showError('This post has been removed or failed to load.'); });
+    })();
+  </script>
+</body>
+</html>

@@ -1,3 +1,14 @@
+/**
+ * Articles.js
+ *
+ * Author: Jonathan CJ
+ * Date: 2025-08-26
+ * Version: 1.0.0
+ *
+ * This file contains the JavaScript code for handling articles on the website.
+ * It uses the marked.js library to render Markdown content.
+ * The articles data is loaded from an external JSON file.
+ */
 // Configuration for marked.js
 marked.setOptions({
     breaks: true,
@@ -36,11 +47,16 @@ async function loadArticles() {
     // If we're on the articles listing page
     if (articleList) {
         const listHTML = articles.map(article => `
-            <article class="article-preview">
-                <h2><a href="/articles/post.html?id=${article.id}">${article.title}</a></h2>
-                <div class="article-meta">${new Date(article.date).toLocaleDateString()}</div>
-                <p>${article.description}</p>
-                <a href="/articles/post.html?id=${article.id}" class="read-more">Read more →</a>
+            <article class="article-preview no-image article-preview-large">
+                <div class="article-preview-content">
+                    <a class="article-preview-link" href="/articles/${article.id}.html">
+                        <h2 class="article-preview-title">${article.title}</h2>
+                        <div class="article-excerpt">${article.description}</p>
+                    </a>
+                    <footer class="article-meta">
+                        <time datetime="${article.date}">${new Date(article.date).toLocaleDateString('en-US', { day: 'numeric', month: 'short', year: 'numeric' })}</time>
+                    </footer>
+                </div>
             </article>
         `).join('');
         
@@ -48,7 +64,9 @@ async function loadArticles() {
     } 
     // If we're on an individual article page
     else if (window.location.pathname.includes('/articles/') && window.location.pathname !== '/articles/') {
-        const articleId = window.location.pathname.split('/').pop();
+        // Extract ID from /articles/{id}.html
+        let last = window.location.pathname.split('/').pop();
+        const articleId = last ? last.replace(/\.html$/i, '') : '';
         const article = articles.find(a => a.id === articleId);
         
         if (article) {
@@ -111,12 +129,12 @@ function updateMetaTags(article) {
     // Update Open Graph tags
     document.querySelector('meta[property="og:title"]').content = `${article.title} | Joonjavellana`;
     document.querySelector('meta[property="og:description"]').content = article.description;
-    document.querySelector('meta[property="og:url"]').content = `https://jonathancj-portfolio.netlify.app/articles/${article.id}`;
+    document.querySelector('meta[property="og:url"]').content = `https://jonathancj-portfolio.netlify.app/articles/${article.id}.html`;
     
     // Update Twitter card tags
     document.querySelector('meta[property="twitter:title"]').content = `${article.title} | Joonjavellana`;
     document.querySelector('meta[property="twitter:description"]').content = article.description;
-    document.querySelector('meta[property="twitter:url"]').content = `https://jonathancj-portfolio.netlify.app/articles/${article.id}`;
+    document.querySelector('meta[property="twitter:url"]').content = `https://jonathancj-portfolio.netlify.app/articles/${article.id}.html`;
     
     // Update canonical URL
     let canonical = document.querySelector('link[rel="canonical"]');
@@ -125,7 +143,7 @@ function updateMetaTags(article) {
         canonical.rel = 'canonical';
         document.head.appendChild(canonical);
     }
-    canonical.href = `https://jonathancj-portfolio.netlify.app/articles/${article.id}`;
+    canonical.href = `https://jonathancj-portfolio.netlify.app/articles/${article.id}.html`;
 }
 
 // Load articles when the page loads

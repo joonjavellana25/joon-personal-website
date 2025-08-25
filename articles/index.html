@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Articles | Joonjavellana</title>
+    <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/articles.css">
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
@@ -39,13 +40,23 @@
         </div>
     </nav>
 
-    <main class="container article-container">
+    <main class="container article-container max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl">
         <h1>Articles</h1>
-        <div id="article-list" class="article-list">
-            <!-- Articles will be loaded here -->
+        <div class="inner">
+            <div id="article-list" class="article-list">
+                <!-- Articles will be loaded here -->
+            </div>
         </div>
     </main>
 
+    <footer class="main-footer">
+        <div class="container">
+            <a href="https://joonjavellana.com/">Joonjavellana</a> &copy; 2025
+        </div>
+    </footer>
+
     <script src="../js/articles.js"></script>
+    <script src="/js/featured.js"></script>
+    <script src="/js/main.js"></script>
 </body>
 </html>
