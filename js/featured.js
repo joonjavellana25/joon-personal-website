@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div class="article-card-content">
                         <span class="article-category">${article.category}</span>
                         <h2>
-                            <a href="/articles/post.html?id=${article.id}">${article.title}</a>
+                            <a href="/articles/${article.id}">${article.title}</a>
                         </h2>
                         <p class="article-excerpt">${article.description}</p>
                         <div class="article-meta">

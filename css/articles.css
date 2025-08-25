@@ -29,7 +29,7 @@
 }
 .article-card-content h2 {
     margin: 0 0 0.5rem;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     text-align: left;
 }
 .article-preview-link {
@@ -63,10 +63,6 @@
 .article-meta .sep {
     margin: 0 4px;
 }
-.article-excerpt {
-    color: #666;
-    margin-bottom: 0.75rem;
-}
 .article-preview {
     background-size: cover;
     display: flex;
@@ -87,7 +83,7 @@
     margin: 0;
 }
 .article-excerpt {
-    font-size: 1.6rem;
+    font-size: 1.1rem;
     line-height: 1.5;
     margin-top: 12px;
     max-width: 720px;
@@ -98,6 +94,8 @@
     line-clamp: 3;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
+    color: #666;
+    margin-bottom: 0.75rem;
 }
 
 .article-meta {
