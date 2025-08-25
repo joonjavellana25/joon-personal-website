@@ -161,6 +161,7 @@
 .article-content li {
     margin: 0.5rem 0;
     letter-spacing: 0.025em !important;
+    font-family: 'Lora', serif;
 }
 .article-content a {
     color: #007bff;
