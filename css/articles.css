@@ -87,17 +87,17 @@
     line-height: 1.5;
     margin-top: 12px;
     max-width: 720px;
-    overflow-y: hidden;
-    text-overflow: ellipsis;
     display: -webkit-box;
-    word-break: break-word;
-    line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -moz-box-orient: vertical;
     -webkit-line-clamp: 3;
+    line-clamp: 3;
     -webkit-box-orient: vertical;
     color: #666;
     margin-bottom: 0.75rem;
+    font-family: 'Lora', serif;
 }
-
 .article-meta {
     color: #666;
     font-size: 0.9rem;
@@ -149,6 +149,7 @@
 .article-content p {
     margin: 1rem 0;
     letter-spacing: 0.025em !important;
+    font-family: 'Lora', serif;
 }
 
 .article-content ul {

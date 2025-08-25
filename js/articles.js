@@ -49,7 +49,7 @@ async function loadArticles() {
         const listHTML = articles.map(article => `
             <article class="article-preview no-image article-preview-large">
                 <div class="article-preview-content">
-                    <a class="article-preview-link" href="/articles/${article.id}.html">
+                    <a class="article-preview-link" href="/articles/${article.id}">
                         <h2 class="article-preview-title">${article.title}</h2>
                         <div class="article-excerpt">${article.description}</p>
                     </a>

@@ -1,6 +1,3 @@
-# Web3: A Game Changer for Local Fintech Startups
-<small>*Published on August 23, 2025 (updated)*</small>
-
 <img class="article-image w-full my-8" src="/assets/img/005.jpg" alt="Blockchain and Fintech">
 
 

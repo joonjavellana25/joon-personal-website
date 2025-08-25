@@ -1,6 +1,3 @@
-# How Coding Saved Me from Myself
-<small>*Published on August 23, 2025*</small>
-
 <img class="article-image w-full my-8" src="https://i.imgur.com/t0KMbCC.jpeg" alt="Laptop Stock Image">
 
 
