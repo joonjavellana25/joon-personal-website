@@ -94,18 +94,15 @@ function buildArticleHtml({ id, title, description, image, file, date }) {
 
   <main class="container article-list article-container max-w-screen-md lg:max-w-screen-lg">
     <section class="p-8 px-2 md:px-3 lg:px-4 relative">
-      <div class="flex justify-between mb-4">
-        <button onclick="window.history.back()" class="btn btn-primary px-4 py-2 mt-4">
+      <div class="flex flex-col md:flex-row md:justify-between mb-4">
+        <button onclick="window.history.back()" class="btn btn-primary px-4 py-2 mt-4 w-1/2 md:w-1/4">
             &larr; <span class="text-lg">Back</span>
-        </button>
-        <button onclick="window.location.href='/articles/'" class="btn btn-primary px-4 py-2 mt-4">
-            <span class="text-lg">Articles</span>
         </button>
       </div>
       <article class="article-preview">
         <header>
           <h1>${escapeHtml(title)}</h1>
-          <div class="article-meta">${escapeHtml(new Date(date).toLocaleDateString())}</div>
+          <div class="article-meta">${new Date(date).toLocaleDateString('en-AU', { day: '2-digit', month: 'short', year: 'numeric' })}</div>
         </header>
         <div id="article-body" class="article-body article-content"></div>
       </article>

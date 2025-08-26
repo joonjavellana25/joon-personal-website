@@ -70,6 +70,12 @@
     grid-column: span 2;
     position: relative;
 }
+.article-preview h1 {
+    font-size: clamp(2.3rem, 5vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1.05;
+    margin-bottom: 0;
+}
 .article-preview-content {
     display: flex;
     flex-direction: column;
@@ -135,7 +141,7 @@
 .article-content h5,
 .article-content h6 {
     margin: 1.5em 0 1rem;
-    line-height: 1.3;
+    line-height: 1.05;
     color: #222;
 }
 
@@ -150,18 +156,24 @@
     margin: 1rem 0;
     letter-spacing: 0.025em !important;
     font-family: 'Lora', serif;
+    font-weight: 400;
+    line-height: 1.6em;
 }
 
 .article-content ul {
     margin-left: 1rem;
+    line-height: 1.6em;
 }
 .article-content ol {
     margin-left: 1rem;
+    line-height: 1.6em;
 }
 .article-content li {
     margin: 0.5rem 0;
     letter-spacing: 0.025em !important;
     font-family: 'Lora', serif;
+    font-weight: 400;
+    line-height: 1.6em;
 }
 .article-content a {
     color: #007bff;
